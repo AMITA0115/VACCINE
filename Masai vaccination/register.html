@@ -1,0 +1,97 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input placeholder="Unique ID" type="text" id="Unique_id" />
+        <input placeholder="Name" type="text" id="name" minlength="4"/>
+        <input placeholder="Age" type="text" id="age" />
+        <input type="radio" value="Designation" />
+         <input type="radio" id="Designation" Designation="Employee" value="Designation1">
+        <label for="Employee">Employee</label>
+        <input type="radio" id="Designation" Designation="Student" value="Student">
+        <label for="Student">Student</label>
+
+        <select id="Vaccine">
+            <option value="">Select Vaccine</option>
+            <option value="Covishield">Covishield</option>
+            <option value="Covaxin">Covaxin</option>
+            <option value="Sputnik">Sputnik</option>
+       </select>
+       <select id="priority">
+        <option value="">Select Priority</option>
+        <option value="High">p0</option>
+        <option value="Medium">p1</option>
+        <option value="Medium">p2</option>
+        <option value="Low">p3</option>
+      </select>
+     <button id="Register">Register</button> -->
+    <!-- </form> -->
+<!-- </body>
+<script>
+    let Regbutton= document.getElementById("Register");
+    let data=JSON.parse(localStorage.getItem("regist"));
+
+    let Unique=document.getElementById("Unique_id");
+    let name=document.getElementById("name");
+    let age=document.getElementById("age");
+    let designation=document.getElementById("Designation");
+    let priority=document.getElementById("priority");
+    let Vaccine=document.getElementById("Vaccine");
+   
+    if(data==null){
+        data=[];
+    }
+
+    Regbutton.addEventListener("click", (e) => {
+        e.preventDefault();
+        if(checkDuplicate(Unique)){
+            return "not allowed"
+        } else {
+            data.push(Unique)
+        }
+
+      let obj={
+        Unique:Unique.value,
+        name:name.value,
+        age:age.value,
+        designation:designation.value,
+        priority:priority.value,
+        Vaccine:Vaccine.value
+      }
+      data.push(obj);
+      localStorage.setItem("regist", JSON.stringify(data))
+    });
+
+    function checkDuplicate(Unique){
+        if(Unique.value!==Unique.value){
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="nav">
+        <h1>Registeration page</h1>
+        <a href="./register.html">Registration Page</a>
+        <a href="./dashboard.html">Dashboard  Page</a>
+        <a href="./vaccinated.html">Vaccinated   Page</a>   
+    </div>
+</body>
+</html>
